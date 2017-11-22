@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Formulir Tambah Data</title>
+</head>
+<body>
+	<h1>Formulir Tambah Data</h1>
+
+	<form th:object="${mhs}" 
+		th:action="@{/tambah-data}"
+		method="post">
+		<table>
+			<tr>
+				<td>ID</td>
+				<td><input type="text" 
+					th:field="*{id}"/></td>
+			</tr>
+			<tr>
+				<td>NOPOL</td>
+				<td><input type="text" 
+					th:field="*{nopol}"/></td>
+			</tr>
+			<tr>
+				<td>JAM MASUK</td>
+				<td><input type="text" 
+					th:field="*{jammasuk}"/></td>
+			</tr>
+		</table>
+		<button type="submit">Simpan</button>
+	</form>
+</body>
+</html>
